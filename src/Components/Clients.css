@@ -1,0 +1,1335 @@
+/* =========================================================
+   GLOBAL CLIENTS PAGE
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #060a12;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================================================
+   CLIENTS PAGE
+========================================================= */
+
+.clients-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(0, 217, 255, 0.13),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 10% 50%,
+      rgba(0, 217, 255, 0.05),
+      transparent 28%
+    ),
+    #060a12;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER / NAVIGATION
+========================================================= */
+
+.clients-header {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+  padding: 26px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.clients-logo {
+  font-size: 1.75rem;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #ffffff;
+
+  transition: color 0.3s ease;
+}
+
+.clients-logo span {
+  color: #00d9ff;
+}
+
+.clients-logo:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.clients-nav {
+  display: flex;
+  align-items: center;
+
+  gap: 32px;
+}
+
+.clients-nav a {
+  position: relative;
+
+  color: #aebbcf;
+
+  font-size: 0.94rem;
+  font-weight: 600;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.clients-nav a:hover {
+  color: #00d9ff;
+}
+
+.clients-nav a.active {
+  color: #ffffff;
+}
+
+.clients-nav a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: -9px;
+
+  height: 2px;
+
+  background: #00d9ff;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   HEADER BUTTON
+========================================================= */
+
+.clients-header-btn {
+  padding: 11px 20px;
+
+  background: #00d9ff;
+
+  color: #061018 !important;
+
+  border-radius: 8px;
+
+  font-weight: 700 !important;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.clients-header-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 28px rgba(0, 217, 255, 0.25);
+}
+
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.clients-container {
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+
+/* =========================================================
+   CLIENTS HERO
+========================================================= */
+
+.clients-hero {
+  position: relative;
+
+  padding: 110px 0 120px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.clients-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -160px;
+  top: 20px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 217, 255, 0.07);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+.clients-hero-content {
+  max-width: 850px;
+}
+
+
+/* =========================================================
+   HERO EYEBROW
+========================================================= */
+
+.clients-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 25px;
+
+  color: #00d9ff;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.clients-hero h1 {
+  max-width: 850px;
+
+  margin-bottom: 28px;
+
+  color: #ffffff;
+
+  font-size: clamp(3rem, 6vw, 5.5rem);
+
+  line-height: 1.02;
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+}
+
+.clients-hero h1 span {
+  display: block;
+
+  color: #00d9ff;
+}
+
+
+/* =========================================================
+   HERO PARAGRAPH
+========================================================= */
+
+.clients-hero-content p {
+  max-width: 690px;
+
+  color: #9aa8ba;
+
+  font-size: 1.08rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   STATS SECTION
+========================================================= */
+
+.clients-stats-section {
+  padding: 65px 0 0;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.clients-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.client-stat {
+  padding: 32px 25px;
+
+  text-align: center;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.client-stat:last-child {
+  border-right: none;
+}
+
+
+/* =========================================================
+   STAT NUMBER
+========================================================= */
+
+.client-stat h2 {
+  margin-bottom: 8px;
+
+  color: #00d9ff;
+
+  font-size: 2.5rem;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   STAT TEXT
+========================================================= */
+
+.client-stat p {
+  color: #8997aa;
+
+  font-size: 0.84rem;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   CLIENT LIST SECTION
+========================================================= */
+
+.clients-list-section {
+  padding: 110px 0 120px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.clients-section-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 60px;
+
+  margin-bottom: 65px;
+}
+
+
+/* =========================================================
+   SMALL LABEL
+========================================================= */
+
+.clients-small-label {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: #00d9ff;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.clients-section-heading h2 {
+  color: #ffffff;
+
+  font-size: clamp(2.3rem, 4vw, 4rem);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.clients-section-heading h2 span {
+  color: #00d9ff;
+}
+
+
+/* =========================================================
+   SECTION DESCRIPTION
+========================================================= */
+
+.clients-section-heading > p {
+  max-width: 510px;
+
+  color: #8997aa;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CLIENT GRID
+========================================================= */
+
+.clients-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   CLIENT CARD
+========================================================= */
+
+.client-card {
+  position: relative;
+
+  min-height: 390px;
+
+  padding: 32px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border: 1px solid rgba(145, 162, 185, 0.16);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16, 25, 40, 0.95),
+      rgba(8, 14, 25, 0.96)
+    );
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   CARD GLOW
+========================================================= */
+
+.client-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  top: -120px;
+  right: -110px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 217, 255, 0.08);
+
+  filter: blur(40px);
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+.client-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(0, 217, 255, 0.42);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.3),
+    0 0 35px rgba(0, 217, 255, 0.05);
+}
+
+.client-card:hover::before {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   CLIENT CARD TOP
+========================================================= */
+
+.client-card-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  margin-bottom: 55px;
+}
+
+.client-number {
+  color: #617086;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   CLIENT ARROW
+========================================================= */
+
+.client-arrow {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 50%;
+
+  color: #9ba9bb;
+
+  font-size: 1.05rem;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.client-card:hover .client-arrow {
+  background: #00d9ff;
+
+  border-color: #00d9ff;
+
+  color: #061018;
+
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   CLIENT CARD BODY
+========================================================= */
+
+.client-card-body {
+  position: relative;
+
+  z-index: 1;
+
+  flex: 1;
+}
+
+
+/* =========================================================
+   CLIENT LOGO
+========================================================= */
+
+.client-logo {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border: 1px solid rgba(0, 217, 255, 0.22);
+
+  border-radius: 15px;
+
+  background: rgba(0, 217, 255, 0.07);
+
+  color: #00d9ff;
+
+  font-size: 1.5rem;
+
+  font-weight: 800;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.client-card:hover .client-logo {
+  background: rgba(0, 217, 255, 0.14);
+
+  border-color: rgba(0, 217, 255, 0.55);
+
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   CLIENT CATEGORY
+========================================================= */
+
+.client-category {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #00d9ff;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CLIENT NAME
+========================================================= */
+
+.client-card-body h3 {
+  margin-bottom: 15px;
+
+  color: #ffffff;
+
+  font-size: 1.65rem;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   CLIENT DESCRIPTION
+========================================================= */
+
+.client-card-body p {
+  max-width: 500px;
+
+  color: #8997aa;
+
+  font-size: 0.94rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CARD BOTTOM LINE
+========================================================= */
+
+.client-card-line {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  height: 1px;
+
+  margin-top: 30px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  transition: background 0.3s ease;
+}
+
+.client-card:hover .client-card-line {
+  background: rgba(0, 217, 255, 0.3);
+}
+
+
+/* =========================================================
+   CTA SECTION
+========================================================= */
+
+.clients-cta-section {
+  padding: 0 0 120px;
+}
+
+
+/* =========================================================
+   CTA BOX
+========================================================= */
+
+.clients-cta {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  padding: 60px;
+
+  border: 1px solid rgba(0, 217, 255, 0.2);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 217, 255, 0.08),
+      rgba(11, 19, 32, 0.95) 55%
+    );
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CTA GLOW
+========================================================= */
+
+.clients-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -120px;
+  bottom: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 217, 255, 0.1);
+
+  filter: blur(50px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CTA CONTENT
+========================================================= */
+
+.clients-cta > div {
+  position: relative;
+
+  z-index: 1;
+}
+
+.clients-cta h2 {
+  max-width: 650px;
+
+  margin-bottom: 18px;
+
+  color: #ffffff;
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  line-height: 1.08;
+
+  letter-spacing: -1.5px;
+}
+
+.clients-cta h2 span {
+  color: #00d9ff;
+}
+
+.clients-cta p {
+  max-width: 620px;
+
+  color: #91a0b4;
+
+  font-size: 0.98rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.client-cta-button {
+  position: relative;
+
+  z-index: 2;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  padding: 15px 24px;
+
+  border-radius: 9px;
+
+  background: #00d9ff;
+
+  color: #061018;
+
+  font-size: 0.92rem;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.client-cta-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 217, 255, 0.25);
+}
+
+.client-cta-button span {
+  font-size: 1.15rem;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.clients-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 13, 22, 0.96),
+      #05080e
+    );
+
+  padding: 65px 40px 25px;
+}
+
+
+/* =========================================================
+   FOOTER CONTENT
+========================================================= */
+
+.clients-footer-content {
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1.4fr;
+
+  gap: 70px;
+
+  padding-bottom: 55px;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.clients-footer-brand {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.clients-footer-brand .clients-logo {
+  margin-bottom: 15px;
+}
+
+.clients-footer-brand p {
+  max-width: 280px;
+
+  color: #7f8da1;
+
+  font-size: 0.92rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER NAVIGATION / CONTACT
+========================================================= */
+
+.clients-footer-nav,
+.clients-footer-contact {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   FOOTER HEADINGS
+========================================================= */
+
+.clients-footer-nav h3,
+.clients-footer-contact h3 {
+  margin-bottom: 20px;
+
+  color: #ffffff;
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.clients-footer-nav a,
+.clients-footer-contact a {
+  margin-bottom: 12px;
+
+  color: #8f9db0;
+
+  font-size: 0.9rem;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.clients-footer-nav a:hover,
+.clients-footer-contact a:hover {
+  color: #00d9ff;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.clients-footer-bottom {
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+  color: #657286;
+
+  font-size: 0.82rem;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .clients-header {
+    padding: 24px 30px;
+  }
+
+  .clients-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .clients-nav {
+    gap: 20px;
+  }
+
+  .clients-hero {
+    padding: 90px 0 100px;
+  }
+
+  .clients-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .client-stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .client-stat:nth-child(1),
+  .client-stat:nth-child(2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .clients-section-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clients-cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 45px;
+  }
+
+  .clients-footer-content {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+  }
+
+  .clients-footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .clients-header {
+    padding: 22px 20px;
+
+    flex-direction: column;
+
+    gap: 22px;
+  }
+
+  .clients-logo {
+    font-size: 1.55rem;
+  }
+
+  .clients-nav {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px 18px;
+  }
+
+  .clients-nav a {
+    font-size: 0.8rem;
+  }
+
+  .clients-header-btn {
+    padding: 9px 13px;
+  }
+
+
+  /* =====================================================
+     HERO
+  ===================================================== */
+
+  .clients-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .clients-hero {
+    padding: 75px 0 80px;
+  }
+
+  .clients-eyebrow {
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+  }
+
+  .clients-hero h1 {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+
+    letter-spacing: -2px;
+  }
+
+  .clients-hero-content p {
+    font-size: 0.95rem;
+  }
+
+
+  /* =====================================================
+     STATS
+  ===================================================== */
+
+  .clients-stats-section {
+    padding-top: 50px;
+  }
+
+  .clients-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .client-stat {
+    padding: 25px 15px;
+  }
+
+  .client-stat h2 {
+    font-size: 1.9rem;
+  }
+
+  .client-stat p {
+    font-size: 0.72rem;
+
+    line-height: 1.5;
+  }
+
+
+  /* =====================================================
+     CLIENT LIST
+  ===================================================== */
+
+  .clients-list-section {
+    padding: 80px 0 90px;
+  }
+
+  .clients-section-heading {
+    margin-bottom: 45px;
+  }
+
+  .clients-section-heading h2 {
+    font-size: 2.35rem;
+  }
+
+  .clients-section-heading > p {
+    font-size: 0.9rem;
+  }
+
+
+  /* =====================================================
+     CLIENT CARD
+  ===================================================== */
+
+  .client-card {
+    min-height: 360px;
+
+    padding: 25px;
+
+    border-radius: 17px;
+  }
+
+  .client-card-top {
+    margin-bottom: 45px;
+  }
+
+  .client-logo {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 20px;
+
+    font-size: 1.35rem;
+  }
+
+  .client-category {
+    font-size: 0.68rem;
+  }
+
+  .client-card-body h3 {
+    font-size: 1.4rem;
+  }
+
+  .client-card-body p {
+    font-size: 0.9rem;
+  }
+
+
+  /* =====================================================
+     CTA
+  ===================================================== */
+
+  .clients-cta-section {
+    padding-bottom: 85px;
+  }
+
+  .clients-cta {
+    padding: 35px 25px;
+
+    border-radius: 18px;
+
+    gap: 30px;
+  }
+
+  .clients-cta h2 {
+    font-size: 2.2rem;
+  }
+
+  .clients-cta p {
+    font-size: 0.9rem;
+  }
+
+  .client-cta-button {
+    width: 100%;
+  }
+
+
+  /* =====================================================
+     FOOTER
+  ===================================================== */
+
+  .clients-footer {
+    padding: 50px 20px 20px;
+  }
+
+  .clients-footer-content {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding-bottom: 40px;
+  }
+
+  .clients-footer-brand {
+    grid-column: auto;
+  }
+
+  .clients-footer-bottom {
+    font-size: 0.75rem;
+
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .clients-nav {
+    gap: 12px;
+  }
+
+  .clients-nav a {
+    font-size: 0.76rem;
+  }
+
+  .clients-heading h1 {
+    font-size: 2.25rem;
+  }
+
+  .clients-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .client-stat {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .client-stat h2 {
+    font-size: 1.6rem;
+  }
+
+  .clients-cta {
+    padding: 30px 20px;
+  }
+}
